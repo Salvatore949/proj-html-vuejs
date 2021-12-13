@@ -1,16 +1,13 @@
 <template>
-<!-- header bar -->
-  <header>
-
+  <div></div>
 </template>
 
 <script>
 export default {
-  name:'Header',
+   name:'Footer'
 }
 </script>
 
 <style>
-
 
 </style>

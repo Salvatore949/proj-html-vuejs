@@ -1,16 +1,15 @@
 <template>
-<!-- header bar -->
-  <header>
+    <main>
 
+    </main>  
 </template>
 
 <script>
 export default {
-  name:'Header',
+  name:'Main'
 }
 </script>
 
 <style>
-
 
 </style>
