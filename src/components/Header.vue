@@ -1,6 +1,7 @@
 <template>
 <!-- header bar -->
   <header>
+  </header>
 
 </template>
 
