@@ -17,6 +17,18 @@
       </div>
     </nav>
   </header>
+  <div id="jumbotrone">
+    <div id="jumbotrone_text">
+      <h1>Key to your success</h1>
+      <p>EduPrime is the most versatile Wordpress theme for educational puropose,<br>
+          showcasing universities,courses,secondary schools etc.
+        </p>
+        <div id="couple">
+          <button>Search courses</button>
+          <button>Apply for university</button>
+        </div>  
+    </div>
+  </div>
 </template>
 
 <script>
@@ -108,6 +120,33 @@ export default {
   #buttons{
     display: flex;
     color:white;
+  }
+
+  #jumbotrone{
+    text-align: center;
+    /* background-image: url("require'@/assets/theme_slider2_bg-1.jpg"); */
+    background-color:#d4686d;
+    height:60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #jumbotrone h1{
+    color:rgb(255, 255, 255);
+    padding:15px;
+  }
+
+  #jumbotrone p{
+    line-height: 30px;
+  }
+
+  #couple > button{
+    padding:10px;
+    margin: 10px 5px;
+    background-color: #e9d758;
+    border: none;
+    border-radius: 50px;
   }
 
 

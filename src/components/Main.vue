@@ -1,6 +1,8 @@
 <template>
     <main>
 
+
+
     </main>  
 </template>
 
@@ -12,5 +14,4 @@ export default {
 
 <style>
  
-
 </style>
