@@ -26,13 +26,15 @@
                 <h2>Faculties available at EduPrime</h2>
                 <p>A single University with a load of courses, tailored <br>
                 to satisfy any student's need</p>
-            </div>
-            <div id="faculties_symbols">
-              <Choice 
-               v-for="schools in facultiesChoice"
-               :key="schools.id"
-               :card="schools"
-              />
+            </div >
+            <div id="whole_div">
+                <div id="whole_faculties">
+                    <Choice 
+                    v-for="schools in facultiesChoice"
+                    :key="schools.id"
+                    :card="schools"
+                    />
+                </div>
             </div>
         </section>
 
@@ -50,6 +52,150 @@
                     activities and competitions</p>
                 <button>Read More</button>
             </div>
+        </section>
+
+        <!-- fourth section -->
+        <section id="red_part">
+            <!-- first title -->
+            <div id="heading">
+                <img :src="require('@/assets/Clock-and-Bell.png')" alt="">
+                <h2>University Year</h2>
+            </div>
+            <div id="line">
+
+                <div id="red_part_up">
+                    <p>
+                        <strong>Demo classes</strong><br>
+                            In in the first week students try to accommodate with the <br>
+                            teaching style and choose their optional courses. <br>
+                    </p>
+                    <p>
+                        <strong>Graduation</strong><br>
+                            On the day of graduation all students gather for this <br>
+                            ceremony and then network and party among others. <br>
+                    </p>
+                </div>
+                 <img id="step_line" :src="require('@/assets/Timeline-Item.png')" alt="">
+
+                <div id="red_part_down">
+                    <p>
+                        <strong>Orientation</strong><br>
+                            First day of the university here oll students gather for<br>
+                            the opening ceremony and then network with others.<br>
+                    </p>
+                    <p>
+                          <strong>Evaluation</strong><br>
+                            At the end of a semester students take a general<br>
+                            evaluation test for every subject their learning.<br>
+                    </p>
+                </div>
+            </div>
+            <!-- second title -->
+            <h2>Upcoming Events</h2>
+            <div id="coaching_session">
+                <!-- left event -->
+                <div id="left_event">
+                    <h4>Coaching session</h4>
+                    <p> 20 May 21.30 PM</p>
+                    <p>Lorem ipsum dolor sit amet consectetur <br>
+                       adipisicing elit, sed do eiusmod tempor[...]</p>
+                    <button> + find more </button>
+                </div>
+                <!-- center event -->
+                <div id="center_event">
+                    <h4>Coaching session</h4>
+                    <p> 24 Mar 18.00 PM</p>
+                    <p>Lorem ipsum dolor sit amet consectetur <br>
+                       adipisicing elit, sed do eiusmod tempor[...]</p>
+                    <button> + find more </button>
+                </div>
+               <!-- right event -->
+                <div id="right_event">
+                    <h4>Coaching session</h4>
+                    <p> 12 Feb 13.30 PM</p>
+                    <p>Lorem ipsum dolor sit amet consectetur <br>
+                       adipisicing elit, sed do eiusmod tempor[...]</p>
+                    <button> + find more </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- fifth section -->
+        <section>
+            <h2>Latest Courses</h2>
+            <div id="cards">
+            <!-- first card -->            
+                <div id="single_card">
+                    <img src="" alt="">
+                    <h5>Make Better Decisions</h5>
+                    <p>Teacher:<strong>James Colins</strong></p>
+                    <p>Price:strong <strong>$21.00</strong></p>
+                    <button>View Course</button>
+                </div>
+            <!-- second card -->
+                <div id="single_card">
+                    <img src="" alt="">
+                    <h5>Make Better Decisions</h5>
+                    <p>Teacher:<strong>James Colins</strong></p>
+                    <p>Price:strong <strong>$21.00</strong></p>
+                    <button>View Course</button>
+                </div>
+            <!-- third card -->
+                <div id="single_card">
+                    <img src="" alt="">
+                    <h5>Make Better Decisions</h5>
+                    <p>Teacher:<strong>James Colins</strong></p>
+                    <p>Price:strong <strong>$21.00</strong></p>
+                    <button>View Course</button>
+                </div>
+            <!-- fourth card -->
+                <div id="single_card">
+                    <img src="" alt="">
+                    <h5>Make Better Decisions</h5>
+                    <p>Teacher:<strong>James Colins</strong></p>
+                    <p>Price:strong <strong>$21.00</strong></p>
+                    <button>View Course</button>
+                </div>
+            <!-- fifth card -->
+                <div id="single_card">
+                    <img src="" alt="">
+                    <h5>Make Better Decisions</h5>
+                    <p>Teacher:<strong>James Colins</strong></p>
+                    <p>Price:strong <strong>$21.00</strong></p>
+                    <button>View Course</button>
+                </div>
+            </div>
+        </section>
+        <!-- sixth section -->
+        <section>
+            <div id="sixth_left">
+                <h2>The most efficient <br>
+                    examination method
+                </h2>
+                <p>Edu prime is gathered teachers from Around The Globe to <br>
+                   brainstorm in Order to facilitate di evaluation of Our students <br>
+                   Every teacher from our University has an influence on how <br>
+                   students are evaluated and is subject
+                </p>
+                <button>Discover the method</button>
+            </div>
+            <img src="" alt="">
+        </section>
+        <!-- seventh section -->
+        <section>
+            <img src="" alt="">
+            <div id="seventh_right">
+                <h2>Variable fees for<br>
+                    international students</h2>
+                <p>Edu prime is gathered teachers from Around The Globe to <br>
+                   brainstorm in Order to facilitate di evaluation of Our students <br>
+                   Every teacher from our University has an influence on how <br>
+                   students are evaluated and is subject
+                </p>                
+                <button>Discover the method</button>
+            </div>
+
         </section>
 
     </main>  
@@ -77,7 +223,7 @@ export default {
               },
 
               {
-                  img:"Medicine.png",
+                  img:"Medicine-tabs-v2.png",
                   nome:"Medicine",
                   id:3
               },
@@ -107,6 +253,7 @@ export default {
     display: flex;
     width: 70%;
     margin:30px auto;
+    /* background:url('../assets/theme_slider1_bg-1.jpg'); */
 }
 
 #books{
@@ -117,6 +264,8 @@ export default {
 #first-section h2{
     font-size: 35px;
     margin-bottom: 40px;
+    color: #3d404f;
+
 }
 
 #first-section_id > p{
@@ -142,44 +291,44 @@ export default {
 
 }
 
-
 /*second section*/
 
 #faculties_available{
     text-align: center;
-    padding-top: 150px;
+    padding-top: 70px;
 }
 
 #faculties_available > h2{
     padding-bottom:30px;
     font-size:35px;
+    color:#3d404f;
 }
 
 #faculties_available > p{
     font-size:17px;
     line-height: 22px;
+    color: #80828c;
 }
 
-#faculties_symbols{
-    border: 1px solid grey; 
+#whole_div{
+    border-top: 1px solid rgb(228, 223, 223);
+    border-bottom: 1px solid rgb(233, 231, 231);
+    margin: 40px 0 20px;
+    box-shadow: 2px 12px 30px #f5f0f0;
+}
+
+#whole_faculties{
     display: flex;
-    justify-content: center;  
-    margin-top: 30px;
+    width: 80%;
+    margin: 0 auto;
 }
-
-#faculties_symbols > img{
-    width:10%;
-    padding:40px;
-    border: 1px solid rgb(172, 167, 167);
-}
-
 /*third section*/
 
 #gavel{
     display: flex;
     width: 70%;
-    margin: 0 auto;
-    padding: 100px;
+    margin-left: 200px;
+    padding: 50px 100px;
 }
 
 #gavel img{
@@ -202,9 +351,66 @@ export default {
     color: white;
 }
 
+#gavel_text h2{
+    color:#434959;
+}
+
 #gavel_text p{
     padding:30px 0;
+    color: #80828c;
 }
+
+/*fourth section*/
+#red_part{
+    background-color: #e56768;
+}
+#heading{
+    text-align: center;
+}
+
+#heading h2{
+    font-size: 30px;
+    padding-top:30px;
+    color: white;
+}
+
+#heading img{
+    width:80px;
+    padding-top:60px;
+}
+
+#line{
+    width: 80%;
+    margin:0 auto;
+}
+
+#step_line {
+    margin: 30px;
+}
+
+
+#red_part_up{
+    display: flex;
+    color: white;
+    margin-left:180px;
+}
+
+#red_part_up p{
+    text-align: center;
+    padding: 80px 0px 0;
+    margin-left: 150px;
+}
+
+#red_part_down{
+    display: flex;
+    color: white;
+}
+
+#red_part_down p{
+    text-align: center;
+    padding: 0 95px;
+}
+
 
 
 </style>
