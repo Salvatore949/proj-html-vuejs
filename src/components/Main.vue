@@ -37,7 +37,20 @@
         </section>
 
 
-        
+        <!-- third section -->
+        <section id="gavel">
+            <!-- left div -->
+            <img :src="require('@/assets/Gavel-Illustration-e1556884768193.png')" alt="">
+            <!-- right div -->
+            <div id="gavel_text">
+                <h2>Law Faculty</h2>
+                <p>Learning from World leading academics and practitioners will not only receive <br>
+                    and outstanding grounding in the Theory of love like you will be able to understand <br>
+                    how those principles are applied in practise is through a range of student-led <br>
+                    activities and competitions</p>
+                <button>Read More</button>
+            </div>
+        </section>
 
     </main>  
 </template>
