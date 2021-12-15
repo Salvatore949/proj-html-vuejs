@@ -53,7 +53,6 @@ export default {
   padding: 10px;
   color: white;
   font-weight: 800;
-
 }
 
 </style>

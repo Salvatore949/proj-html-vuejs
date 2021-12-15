@@ -17,7 +17,7 @@ export default {
 
 <style>
 
-#buttons ul{
+ul{
     list-style-type: none;
     display: flex;
     align-items: center;

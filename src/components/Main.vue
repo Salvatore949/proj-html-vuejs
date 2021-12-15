@@ -17,7 +17,6 @@
             </div>
             <!-- right part -->
             <img id="bachelor" :src= "require('@/assets/Graduation-Illustration.png')" alt="Bachelor">
-            <!-- <img id="point" :src= "require('@/assets/home-background.png')" alt=""> -->
         </section>
 
         <!-- second section -->

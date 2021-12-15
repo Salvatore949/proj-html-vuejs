@@ -124,7 +124,6 @@ export default {
 
   #jumbotrone{
     text-align: center;
-
     background-color:#d4686d;
     height:60vh;
     display: flex;
