@@ -91,85 +91,59 @@
                 </div>
             </div>
             <!-- second title -->
-            <h2>Upcoming Events</h2>
-            <div id="coaching_session">
-                <!-- left event -->
-                <div id="left_event">
-                    <h4>Coaching session</h4>
-                    <p> 20 May 21.30 PM</p>
-                    <p>Lorem ipsum dolor sit amet consectetur <br>
-                       adipisicing elit, sed do eiusmod tempor[...]</p>
-                    <button> + find more </button>
+            <div id="lower_part">
+                <div id="lower_header">
+                    <img :src="require('@/assets/upcoming-events-calendar-icon.png')" alt="">
+                    <h2>Upcoming Events</h2>
                 </div>
-                <!-- center event -->
-                <div id="center_event">
-                    <h4>Coaching session</h4>
-                    <p> 24 Mar 18.00 PM</p>
-                    <p>Lorem ipsum dolor sit amet consectetur <br>
-                       adipisicing elit, sed do eiusmod tempor[...]</p>
-                    <button> + find more </button>
+                <div id="coaching_session">
+                    <!-- left event -->
+                    <div id="event">
+                        <img src="" alt="">
+                        <h4>Coaching session</h4>
+                        <p> 20 May 21.30 PM</p>
+                        <p>Lorem ipsum dolor sit amet consectetur <br>
+                        adipisicing elit, sed do eiusmod tempor[...]</p>
+                        <button> + find more </button>
+                    </div>
+                    <!-- center event -->
+                    <div id="event">
+                        <h4>Coaching session</h4>
+                        <p> 24 Mar 18.00 PM</p>
+                        <p>Lorem ipsum dolor sit amet consectetur <br>
+                        adipisicing elit, sed do eiusmod tempor[...]</p>
+                        <button> + find more </button>
+                    </div>
+                <!-- right event -->
+                    <div id="event">
+                        <h4>Coaching session</h4>
+                        <p> 12 Feb 13.30 PM</p>
+                        <p>Lorem ipsum dolor sit amet consectetur <br>
+                        adipisicing elit, sed do eiusmod tempor[...]</p>
+                        <button> + find more </button>
+                    </div>
                 </div>
-               <!-- right event -->
-                <div id="right_event">
-                    <h4>Coaching session</h4>
-                    <p> 12 Feb 13.30 PM</p>
-                    <p>Lorem ipsum dolor sit amet consectetur <br>
-                       adipisicing elit, sed do eiusmod tempor[...]</p>
-                    <button> + find more </button>
-                </div>
+                <button>View All Events</button>
             </div>
         </section>
 
 
         <!-- fifth section -->
         <section>
-            <h2>Latest Courses</h2>
+            <h2 id="fifth_head">Latest Courses</h2>
             <div id="cards">
-            <!-- first card -->            
-                <div id="single_card">
-                    <img src="" alt="">
-                    <h5>Make Better Decisions</h5>
-                    <p>Teacher:<strong>James Colins</strong></p>
-                    <p>Price:strong <strong>$21.00</strong></p>
-                    <button>View Course</button>
-                </div>
-            <!-- second card -->
-                <div id="single_card">
-                    <img src="" alt="">
-                    <h5>Make Better Decisions</h5>
-                    <p>Teacher:<strong>James Colins</strong></p>
-                    <p>Price:strong <strong>$21.00</strong></p>
-                    <button>View Course</button>
-                </div>
-            <!-- third card -->
-                <div id="single_card">
-                    <img src="" alt="">
-                    <h5>Make Better Decisions</h5>
-                    <p>Teacher:<strong>James Colins</strong></p>
-                    <p>Price:strong <strong>$21.00</strong></p>
-                    <button>View Course</button>
-                </div>
-            <!-- fourth card -->
-                <div id="single_card">
-                    <img src="" alt="">
-                    <h5>Make Better Decisions</h5>
-                    <p>Teacher:<strong>James Colins</strong></p>
-                    <p>Price:strong <strong>$21.00</strong></p>
-                    <button>View Course</button>
-                </div>
-            <!-- fifth card -->
-                <div id="single_card">
-                    <img src="" alt="">
-                    <h5>Make Better Decisions</h5>
-                    <p>Teacher:<strong>James Colins</strong></p>
-                    <p>Price:strong <strong>$21.00</strong></p>
-                    <button>View Course</button>
-                </div>
+               <Secondcards
+               v-for="skils in cardList"
+               :key="skils.id"
+               :opportunity="skils"
+                />
             </div>
         </section>
+
         <!-- sixth section -->
-        <section>
+        <section id="sixth_section">
             <div id="sixth_left">
+                <img :src="require('@/assets/Exam-icon.png')" alt="">
                 <h2>The most efficient <br>
                     examination method
                 </h2>
@@ -180,12 +154,15 @@
                 </p>
                 <button>Discover the method</button>
             </div>
-            <img src="" alt="">
+            <img :src="require('@/assets/Exam-Illustration.png')" alt="">
         </section>
+
+
         <!-- seventh section -->
-        <section>
-            <img src="" alt="">
+        <section id="seventh_section">
+            <img :src="require('@/assets/Girl-Illustration.png')" alt="">
             <div id="seventh_right">
+                <img :src="require('@/assets/Exam-icon-1.png')" alt="">
                 <h2>Variable fees for<br>
                     international students</h2>
                 <p>Edu prime is gathered teachers from Around The Globe to <br>
@@ -197,16 +174,29 @@
             </div>
 
         </section>
+         
+        <!-- eighth section -->
+
+        <section>
+            <div id="red_bar">
+             <p>SubScribe Now to our Newsletter</p>
+             <input id="insert" type="text" placeholder="Email address..">
+             <button></button>
+            </div>
+        </section>
+
 
     </main>  
 </template>
 
 <script>
 import Choice from '@/components/Choice.vue'
+import Secondcards from '@/components/Secondcards.vue'
 export default {
   name:'Main',
   components:{
-   Choice
+   Choice,
+   Secondcards
   },
   data(){
       return{
@@ -239,9 +229,43 @@ export default {
                   nome:"Graphic Designe",
                   id:5
               }
-          ]
-      }
-  }
+          ],
+
+            cardList: [
+                {
+                    img:'Decisions-icon.png',
+                    subtile:'Make Better Decision',
+                    teacher:'James Colins',
+                    money:'$21.00',
+                    id:1
+                },
+
+                {
+                    img:'Speaker-icon.png',
+                    subtile:'How to be a speaker',
+                    teacher:'James Colins',
+                    money:'free',
+                    id:2
+                },
+
+                {
+                    img:'Network-icon.png',
+                    subtile:'Network Introductions',
+                    teacher:'James Colins',
+                    money:'free',
+                    id:3
+                },
+
+                {
+                    img:'Brand-icon.png',
+                    subtile:'Brand Management',
+                    teacher:'James Colins',
+                    money:'free',
+                    id:4
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -388,7 +412,6 @@ export default {
     margin: 30px;
 }
 
-
 #red_part_up{
     display: flex;
     color: white;
@@ -411,6 +434,154 @@ export default {
     padding: 0 95px;
 }
 
+/* Lower part */
 
+#lower_header{
+    text-align: center; 
+    padding:40px 40px;
+}
 
+#lower_header > h2{
+    padding-top:10px;
+    color: white;
+    font-size: 40px;
+}
+
+#lower_header > img{
+    width: 50px;
+}
+
+#lower_part > button {
+    padding:13px;
+    border-radius:50px;
+    background-color:#e9d758;
+    border:none;
+    color: white;
+    font-weight: 800;
+    width: 180px;
+}
+
+#coaching_session{
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    width: 70%;
+}
+
+#event{
+    padding: 20px 50px;
+    background-color:#ffffff;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+#event > button {
+    background-color:#e56768 ;
+    border-radius: 30px;
+    padding: 10px;
+    border:none;
+    color: white;
+
+}
+
+/* fifth section */
+
+#fifth_head{
+    padding:40px;
+    margin-left: 262px;
+}
+
+#cards{
+    display: flex;
+    justify-content: center;
+}
+
+/* sixth section */
+
+#sixth_section{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#sixth_left > button {
+    width: 180px;
+    padding:10px 0;
+    background-color: #e56768;
+    border:none;
+    border-radius: 50px;
+}
+
+#sixth_section p{
+    padding:30px 50px 30px 0px;
+}
+
+#sixth_section img{
+    width: 30%;
+    padding:20px 0;
+}
+
+#sixth_left{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+#sixth_left img{
+    width: 40px;
+}
+
+/* seventh section */
+
+#seventh_section{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+#seventh_right > button {
+    width: 180px;
+    padding:10px 0;
+    background-color: #e56768;
+    border:none;
+    border-radius: 50px;
+}
+
+#seventh_section p{
+    padding:30px 0;
+}
+
+#seventh_section img{
+    width: 30%;
+}
+
+#seventh_right img{
+    width: 40px;
+    padding:20px 0;
+}
+
+#seventh_right{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    padding-left:70px ;
+}
+
+/* eighth section */
+
+#red_bar{
+    background-color:#e56768;
+}
+
+#red_bar{
+    color: white;
+    font-size: 30px;
+}
+
+#insert{
+    padding:8px 50px;
+    border-radius: 30px;
+    border:none;
+}
 </style>

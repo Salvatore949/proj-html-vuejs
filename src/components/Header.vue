@@ -38,7 +38,7 @@ import Options from '@/components/Options.vue'
 export default {
   name:'Header',
   components:{
-    Options
+    Options,
   },
    data(){
     return {
