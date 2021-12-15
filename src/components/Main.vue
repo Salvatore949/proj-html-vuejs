@@ -9,13 +9,14 @@
                 <h2>Thousand of courses <br>
                     for any type of student</h2>
                 <p>At EduPrime it doesn't matter what the domain you wish to pursue a career in. Here you <br> 
-                can find a person that satisfies your needs within a click away and applies for a course <br>
-                in a matter of minutes. EduPrime is ranked as the most university in the <br>
-                world, thanks to the number of courses it provides</p>
+                    can find a person that satisfies your needs within a click away and applies for a course <br>
+                    in a matter of minutes. EduPrime is ranked as the most university in the <br>
+                    world, thanks to the number of courses it provides
+                </p>
                 <button>Browse through courses</button>
             </div>
             <!-- right part -->
-            <img id="bachelor" :src= "require('@/assets/Graduation-Illustration.png')" alt="">
+            <img id="bachelor" :src= "require('@/assets/Graduation-Illustration.png')" alt="Bachelor">
             <!-- <img id="point" :src= "require('@/assets/home-background.png')" alt=""> -->
         </section>
 
@@ -42,14 +43,15 @@
         <!-- third section -->
         <section id="gavel">
             <!-- left div -->
-            <img :src="require('@/assets/Gavel-Illustration-e1556884768193.png')" alt="">
+            <img :src="require('@/assets/Gavel-Illustration-e1556884768193.png')" alt="Gavel">
             <!-- right div -->
             <div id="gavel_text">
                 <h2>Law Faculty</h2>
                 <p>Learning from World leading academics and practitioners will not only receive <br>
                     and outstanding grounding in the Theory of love like you will be able to understand <br>
                     how those principles are applied in practise is through a range of student-led <br>
-                    activities and competitions</p>
+                    activities and competitions
+                </p>
                 <button>Read More</button>
             </div>
         </section>
@@ -58,7 +60,7 @@
         <section id="red_part">
             <!-- first title -->
             <div id="heading">
-                <img :src="require('@/assets/Clock-and-Bell.png')" alt="">
+                <img :src="require('@/assets/Clock-and-Bell.png')" alt="Clock">
                 <h2>University Year</h2>
             </div>
             <div id="line">
@@ -75,7 +77,7 @@
                             ceremony and then network and party among others. <br>
                     </p>
                 </div>
-                 <img id="step_line" :src="require('@/assets/Timeline-Item.png')" alt="">
+                 <img id="step_line" :src="require('@/assets/Timeline-Item.png')" alt="Timeline">
 
                 <div id="red_part_down">
                     <p>
@@ -93,37 +95,18 @@
             <!-- second title -->
             <div id="lower_part">
                 <div id="lower_header">
-                    <img :src="require('@/assets/upcoming-events-calendar-icon.png')" alt="">
+                    <img :src="require('@/assets/upcoming-events-calendar-icon.png')" alt="Calendar">
                     <h2>Upcoming Events</h2>
                 </div>
-                <div id="coaching_session">
-                    <!-- left event -->
-                    <div id="event">
-                        <img src="" alt="">
-                        <h4>Coaching session</h4>
-                        <p> 20 May 21.30 PM</p>
-                        <p>Lorem ipsum dolor sit amet consectetur <br>
-                        adipisicing elit, sed do eiusmod tempor[...]</p>
-                        <button> + find more </button>
+                <div id="post_cards">
+                    <div id="coaching_session">
+                        <Coaching
+                        v-for="time in activities"
+                        :key="time.id"
+                        :lesson="time"/>
                     </div>
-                    <!-- center event -->
-                    <div id="event">
-                        <h4>Coaching session</h4>
-                        <p> 24 Mar 18.00 PM</p>
-                        <p>Lorem ipsum dolor sit amet consectetur <br>
-                        adipisicing elit, sed do eiusmod tempor[...]</p>
-                        <button> + find more </button>
-                    </div>
-                <!-- right event -->
-                    <div id="event">
-                        <h4>Coaching session</h4>
-                        <p> 12 Feb 13.30 PM</p>
-                        <p>Lorem ipsum dolor sit amet consectetur <br>
-                        adipisicing elit, sed do eiusmod tempor[...]</p>
-                        <button> + find more </button>
-                    </div>
+                    <button id="event_button">View All Events</button>
                 </div>
-                <button>View All Events</button>
             </div>
         </section>
 
@@ -143,7 +126,7 @@
         <!-- sixth section -->
         <section id="sixth_section">
             <div id="sixth_left">
-                <img :src="require('@/assets/Exam-icon.png')" alt="">
+                <img :src="require('@/assets/Exam-icon.png')" alt="Exam">
                 <h2>The most efficient <br>
                     examination method
                 </h2>
@@ -154,15 +137,15 @@
                 </p>
                 <button>Discover the method</button>
             </div>
-            <img :src="require('@/assets/Exam-Illustration.png')" alt="">
+            <img :src="require('@/assets/Exam-Illustration.png')" alt="Exam">
         </section>
 
 
         <!-- seventh section -->
         <section id="seventh_section">
-            <img :src="require('@/assets/Girl-Illustration.png')" alt="">
+            <img :src="require('@/assets/Girl-Illustration.png')" alt="Girl">
             <div id="seventh_right">
-                <img :src="require('@/assets/Exam-icon-1.png')" alt="">
+                <img :src="require('@/assets/Exam-icon-1.png')" alt="Exam">
                 <h2>Variable fees for<br>
                     international students</h2>
                 <p>Edu prime is gathered teachers from Around The Globe to <br>
@@ -172,19 +155,7 @@
                 </p>                
                 <button>Discover the method</button>
             </div>
-
         </section>
-         
-        <!-- eighth section -->
-
-        <section>
-            <div id="red_bar">
-             <p>SubScribe Now to our Newsletter</p>
-             <input id="insert" type="text" placeholder="Email address..">
-             <button></button>
-            </div>
-        </section>
-
 
     </main>  
 </template>
@@ -192,11 +163,13 @@
 <script>
 import Choice from '@/components/Choice.vue'
 import Secondcards from '@/components/Secondcards.vue'
+import Coaching from '@/components/Coaching.vue'
 export default {
   name:'Main',
   components:{
    Choice,
-   Secondcards
+   Secondcards,
+   Coaching
   },
   data(){
       return{
@@ -263,6 +236,22 @@ export default {
                     money:'free',
                     id:4
                 }
+            ],
+
+            activities: [
+                {
+                    date:'20 May 21.30 PM',
+                    id:1
+                },
+                {
+                    date:'24 Mar 23.00 PM',
+                    id:2
+                },
+                {
+                    date:'12 Feb 13.30 PM',
+                    id:3
+                }
+
             ]
         }
     }
@@ -421,7 +410,7 @@ export default {
 #red_part_up p{
     text-align: center;
     padding: 80px 0px 0;
-    margin-left: 150px;
+    margin-left: 110px;
 }
 
 #red_part_down{
@@ -431,7 +420,7 @@ export default {
 
 #red_part_down p{
     text-align: center;
-    padding: 0 95px;
+    padding: 0 70px;
 }
 
 /* Lower part */
@@ -469,19 +458,20 @@ export default {
     width: 70%;
 }
 
-#event{
-    padding: 20px 50px;
-    background-color:#ffffff;
-    border-radius: 10px;
-    margin: 15px;
+#post_cards{
+    display: flex;
+    flex-direction: column;
 }
 
-#event > button {
-    background-color:#e56768 ;
+#event_button {
+    background-color:#e9d758;
     border-radius: 30px;
     padding: 10px;
     border:none;
     color: white;
+    width: 200px;
+    margin:0 auto;
+    margin-bottom:50px;
 
 }
 
@@ -511,6 +501,8 @@ export default {
     background-color: #e56768;
     border:none;
     border-radius: 50px;
+    color: white;
+    font-weight: 800;
 }
 
 #sixth_section p{
@@ -519,7 +511,7 @@ export default {
 
 #sixth_section img{
     width: 30%;
-    padding:20px 0;
+    padding-top:20px;
 }
 
 #sixth_left{
@@ -530,6 +522,11 @@ export default {
 
 #sixth_left img{
     width: 40px;
+    padding-bottom: 10px;
+}
+
+#sixth_left p{
+    line-height: 30px;
 }
 
 /* seventh section */
@@ -546,10 +543,16 @@ export default {
     background-color: #e56768;
     border:none;
     border-radius: 50px;
+    color: white;
+    font-weight: 800;
 }
 
 #seventh_section p{
     padding:30px 0;
+}
+
+#seventh_right p{
+    line-height: 30px;
 }
 
 #seventh_section img{
@@ -572,11 +575,14 @@ export default {
 
 #red_bar{
     background-color:#e56768;
+    display: flex;
+    justify-content: space-around;
 }
 
 #red_bar{
     color: white;
     font-size: 30px;
+    padding: 30px 0;
 }
 
 #insert{
@@ -584,4 +590,20 @@ export default {
     border-radius: 30px;
     border:none;
 }
+
+#red_bar button{
+    padding:8px 0px;
+    color: white;
+    background-color:#e9d758;
+    border:none;
+    border-radius:50px;
+    width: 33px;
+    margin-left:-25px
+}
+
+#red_bar p{
+    margin-top: 5px;
+}
+
+
 </style>
