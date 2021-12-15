@@ -124,7 +124,7 @@ export default {
 
   #jumbotrone{
     text-align: center;
-    /* background-image: url("require'@/assets/theme_slider2_bg-1.jpg"); */
+
     background-color:#d4686d;
     height:60vh;
     display: flex;
@@ -139,6 +139,7 @@ export default {
 
   #jumbotrone p{
     line-height: 30px;
+    color:white;
   }
 
   #couple > button{
@@ -147,6 +148,8 @@ export default {
     background-color: #e9d758;
     border: none;
     border-radius: 50px;
+    color: white;
+    font-weight: 800;
   }
 
 </style>
